@@ -16,24 +16,23 @@
     <div class="container">
         <table class="table">
             <thead>
-                <tr>
+                <tr class="table1">
+
                     <th scope="col">name</th>
                     <th scope="col">symbol</th>
-                    <th scope="col">current price</th>
-                    <th scope="col">24h price change</th>
-                    <th scope="col">total supply</th>
+                    <th scope="col">current_price</th>
+                    <th scope="col">1h_price_change</th>
+                    <th scope="col">24h_price_change</th>
                     <th scope="col">market_cap</th>
-                    <th scope="col">total volume</th>
+                    <th scope="col">total_volume</th>
                 </tr>
             </thead>
             <tbody id="table_body">
 
-            
+
             </tbody>
         </table>
-        <div id="coins1">
-
-        </div>
+       
     </div>
     <script src="index1.js"></script>
 </body>
