@@ -1,4 +1,4 @@
-fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h%2C%207d").then(data => {
+fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C%2024h%2C%207d").then(data => {
 
     return data.json();
 }).then(completedata => {
@@ -7,13 +7,13 @@ fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
     completedata.map(value => {
         console.log(value.name);
         tabledata += `      <tr>
-    <td >${value.name}</td>
-    <td >${value.symbol}</td>
-    <td >${value.current_price}</td>
-    <td >${value.price_change_24h}</td>
-    <td >${value.total_supply}</td>
-    <td >${value.market_cap}</td>
-    <td >${value.total_volume}</td>
+               <td align="left"><img src=${value.image} class="images"> ${value.name}</td>
+               <td align="right">${value.symbol}</td>
+               <td align="right" >${value.current_price}</td>
+               <td align="right" >${value.price_change_percentage_1h_in_currency}</td>
+               <td align="right" >${value.price_change_percentage_24h}</td>
+               <td align="right" >${value.market_cap}</td>
+               <td align="right" >${value.total_volume}</td>
     </tr>
 `
 
